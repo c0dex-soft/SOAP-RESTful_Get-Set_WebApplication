@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://generated.ws.purplemagic.com/" xmlns:tns="http://generated.ws.purplemagic.com/"
+	elementFormDefault="qualified">
+
+	<xs:complexType name="customer">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="customerId" type="xs:integer" />
+			<xs:element name="firstName" type="xs:string" />
+			<xs:element minOccurs="0" name="lastName" type="xs:string" />
+			<xs:element minOccurs="0" name="email" type="xs:string" />
+			<xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="getCustomerRequest">
+		<xs:sequence>
+			<xs:element name="customerId" type="xs:integer"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="customer" type="tns:customer" />
+	<xs:element name="getCustomerRequest" type="tns:getCustomerRequest" />
+
+
+</xs:schema>
